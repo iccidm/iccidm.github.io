@@ -1,0 +1,141 @@
+*,
+*:before,
+*:after {
+    -moz-box-sizing:    border-box; 
+    -webkit-box-sizing: border-box;
+    box-sizing:         border-box; 
+    transition:         all .25s ease-in-out;    
+    -webkit-transition: all .25s ease-in-out;  
+    -moz-transition:    all .25s ease-in-out;  
+    -o-transition:      all .25s ease-in-out;  
+    -ms-transition:     all .25s ease-in-out; 
+    }
+
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0 auto;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+dt{
+  color: #ffffff;
+}
+
+body { line-height: 1; }
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section { display: block; }
+
+nav ul { list-style: none; }
+
+blockquote, q { quotes: none; }
+
+blockquote:before,
+blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+a {
+  margin: 0 auto;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none; }
+
+mark {
+  background-color: #ff9;
+  color: #000; 
+  font-style: italic;
+  font-weight: bold; }
+
+del { text-decoration: line-through; }
+
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;   
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0; }
+
+input, select { vertical-align: middle; }
+
+/* Clearfix */
+
+.cf:before,
+.cf:after {
+   content: "";
+   display: table; }
+.cf:after { clear: both; }
+.ie7 .cf { zoom: 1; }
+
+
+/* Hide */
+
+.hide {
+  position: absolute;
+  left: -999em;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden; }
+  
+  
+/* Tabs General */
+
+.ui-tabs-nav .ui-tabs-selected a:link, 
+.ui-tabs-nav .ui-tabs-selected a:visited { cursor: default; }
+
+.ui-tabs-nav a:hover, 
+.ui-tabs-nav a:focus, 
+.ui-tabs-nav a:active {
+  cursor: pointer; 
+  text-decoration: none;  }
+
+.ui-tabs-panel {
+  padding: 0;
+  margin: 0 auto;
+  clear: both; }
+	
+@media projection, screen { .ui-tabs-hide { display: none; } }
+.feed .ui-tabs-hide { display: none; }
+  

@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://ogp.me/ns#" xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from iccidm.in/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 26 Dec 2019 14:15:16 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<!--Google Analytics-->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-91048198-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<script>
+      var kdready = function(){
+        require(['jquery'],function(jquery){
+          jquery(function($){
+            $('a[href="#"]').on('click',function(e){
+              e.preventDefault();
+              alert('Coming Soon');
+            })
+          });
+          (function($) {
+            $.fn.textWidth = function(){
+              var calc = '<span style="display:none">' + $(this).text() + '</span>';
+              $('body').append(calc);
+              var width = $('body').find('span:last').width();
+              $('body').find('span:last').remove();
+              return width;
+            };
+            
+            $.fn.marquee = function(args) {
+              var that = $(this);
+              var textWidth = that.textWidth(),
+                offset = that.width(),
+                width = offset,
+                css = {
+                  'text-indent' : that.css('text-indent'),
+                  'overflow' : that.css('overflow'),
+                  'white-space' : that.css('white-space')
+                },
+                marqueeCss = {
+                  'text-indent' : width,
+                  'overflow' : 'hidden',
+                  'white-space' : 'nowrap'
+                },
+                args = $.extend(true, { count: -1, speed: 1e1, leftToRight: false }, args),
+                i = 0,
+                stop = textWidth*-1,
+                dfd = $.Deferred();
+              
+              function go() {
+                if(that.data('marquee') != 'play'){
+                  setTimeout(go, args.speed);
+                  return;
+                }
+                if(that.css('overflow')!="hidden") { 
+                  that.css('text-indent', width + 'px'); 
+                  return false;
+                }
+                if(!that.length) return dfd.reject();
+                if(width == stop) {
+                  i++;
+                  if(i == args.count) {
+                    that.css(css);
+                    return dfd.resolve();
+                  }
+                  if(args.leftToRight) {
+                    width = textWidth*-1;
+                  } else {
+                    width = offset;
+                  }
+                }
+                that.css('text-indent', width + 'px');
+                if(args.leftToRight) {
+                  width++;
+                } else {
+                  width--;
+                }
+                setTimeout(go, args.speed);
+              };
+              
+              if(args.leftToRight) {
+                width = textWidth*-1;
+                width++;
+                stop = offset;
+              } else {
+                width--;            
+              }
+              that.css(marqueeCss);
+              that.data("marquee", 'play');
+              go();
+              return dfd.promise();
+            };
+            $(function($){
+              $("div.marquee").marquee();
+              $("div.marquee").mouseenter(function () {
+                $(this).data("marquee", 'pause');
+              }).mouseleave(function () {
+                $(this).data("marquee", 'play');
+              });
+            });
+          })(jquery);
+          
+        });
+        require(['jquery','waypoints'], function(jquery){
+          jquery(function($){
+            $('#fixed-menu-trigger').waypoint({
+              handler: function(direction) {
+                if(direction == 'down'){
+                  $('.fixed-header').addClass('open');
+                } else {
+                  $('.fixed-header').removeClass('open');
+                }
+              }
+            })
+          });
+        });
+        require(['cycles']);
+      }
+    </script>
+
+<meta charset='utf-8' />
+<meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible' />
+<meta content='en-us' http-equiv='Content-Language' />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" /> 
+
+
+<title>ICCIDM 2020 </title>
+
+<!-- Basic Meta -->
+<meta name="title"         content="International Conference on Computational Intelligence on Data Mining" />
+<meta name="description"   content="" />  
+<meta name="abstract"      content="" />  
+
+<meta name="copyright"     content="(c) Copyright 2018 International Conference on Computational Intelligence on Data Mining" /> 
+<meta name="robots"        content="" />
+<meta name="revisit-after" content="1 day" />
+<link rel="image_src" href="theme/img/social-share.png" />
+
+<!-- Facebook OG -->
+<meta property="og:title"       content="International Conference on Computational Intelligence on Data Mining" />
+<meta property="og:type"        content="website" />
+<meta property="og:url"         content="index.php" />
+<meta property="og:image"       content="theme/img/social-share.png" />
+<meta property="og:site_name"   content="International Conference on Computational Intelligence on Data Mining" />
+<meta property="fb:admins" content="766370413" />
+<meta property="og:description" content="The aim of International Conference on Computational Intelligence on Data Mining (IC3A 2018) is to provide an international open forum for the researchers and technocrats in academia as well as in industries from different parts of the world to interact, exchange concepts, prototypes, innovative research ideas and share the outcomes of their research work." />
+
+
+
+
+
+<!-- Google+ Tags -->
+<meta itemprop="name"        content="International Conference on Computational Intelligence on Data Mining">
+<meta itemprop="description" content="The aim of International Conference on Computational Intelligence on Data Mining (IC3A 2018) is to provide an international open forum for the researchers and technocrats in academia as well as in industries from different parts of the world to interact, exchange concepts, prototypes, innovative research ideas and share the outcomes of their research work." />
+<meta itemprop="image"       content="theme/img/social-share.png">
+
+<!-- CSS -->
+<link rel="stylesheet" href="theme/css/reset.css" type="text/css" media="screen, projection"/>   
+<link rel="stylesheet" href="theme/css/type.css" type="text/css" media="screen, projection"/>
+<link rel="stylesheet" href="theme/css/shell.css" type="text/css" media="screen, projection"/>
+<link rel="stylesheet" href="theme/css/nav.css" type="text/css" media="screen, projection"/>
+<link rel="stylesheet" href="theme/css/forms.css" type="text/css" media="screen, projection"/>
+<link rel="stylesheet" href="theme/css/lightbox.css" type="text/css" media="screen, projection" />
+<link rel="stylesheet" href="theme/css/jquery.fancybox-1.3.4.css" type="text/css" media="screen, projection" />
+
+
+    <link rel="stylesheet" href="theme/css/home.css" type="text/css" media="screen, projection"/>
+
+    
+
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+
+<link rel="stylesheet" href="theme/css/print.css" type="text/css" media="print" />
+<link rel="stylesheet" href="bootstrap-3.3.7/css/bootstrap.min.html" type="text/css" media="screen">
+
+<!-- Scripts -->
+<script type="text/javascript" src="theme/scripts/jquery.ti-desktop.jquery-1.9.1-ui-1.10.0-4.html"></script>
+<script type="text/javascript" src="theme/scripts/jquery.carouFredSel-6.2.1-packed.js"></script>
+<script type="text/javascript" src="theme/scripts/site.js"></script> 
+<script type="text/javascript" src="theme/scripts/jquery.fancybox-1.3.4.patch.html"></script>
+
+
+  <link href='theme/css/googleapis1.css' rel='stylesheet' type='text/css'>
+  
+<!-- UPDATED ON 5.23.16 PER THE CLIENT  -->
+<!--<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../www.google-analytics.com/analytics.js','ga');
+  
+
+  ga('create', 'UA-46170687-3', 'auto', {'allowLinker': true});
+  ga('require', 'linker');
+
+  ga('linker:autoLink', ['theunion.org']);
+  ga('send', 'pageview');
+</script>-->
+<script>
+			var kdready = function(){
+				require(['jquery'],function(jquery){
+					jquery(function($){
+						$('a[href="#"]').on('click',function(e){
+							e.preventDefault();
+							alert('Coming Soon');
+						})
+					});
+					</script>
+
+
+
+</head>
+<body id="home">
+	<div class="wrap">
+        	<header itemscope itemtype="#">
+   			<a href="index-2.html" title="International Conference on Computational Intelligence on Data Mining" id="banner" role="banner" itemprop="url">
+       			<img src="theme/img/new banner1.jpg" alt="International Conference on Computational Intelligence on Data Mining" itemprop="logo" class="desktop-logo"/>
+    	   		
+    			</a>
+		</header>      
+     
+ <script type="text/javascript">
+  $(function () {
+    $(".mobile-menu").click(function(){
+      $(".primary").slideToggle();
+      $("#menu").toggleClass("expanded");
+    });
+  });
+</script>  
+<h4><marquee behavior="scroll"  onmouseover="this.stop();" onmouseout="this.start();"scrollamount='8' >
+<font color="white">
+<a href="#" target="_blank"> The Conference proceedings will be published in AISC Series, Springer</a>&nbsp;&nbsp;&nbsp;<img src="images/new.gif" width="33" height="22">
+
+<!--<font color="yellow">Special Session on “COMPUTATIONAL INTELLIGENCE IN DATA ANALYSIS”.</font> <a href="downloads/cfp_specialsession.pdf" target="_blank">Click Here to Download</a>
+<font color="yellow">Special Session on “POWER AND ENERGY SYSTEMS”.</font> <a href="downloads/ss2.pdf" target="_blank">Click Here to Download</a>-->
+
+</font>
+</marquee></h4>
+<nav id="menu" role="navigation" class="cf">
+
+    <button class="mobile-menu" title="Mobile Menu">
+      <strong>Menu</strong> <span class="menu"></span>
+    </button>
+    
+    <ul class="primary"> 
+        
+		   <li class="nav-sponsors-exhibitors dropdown">
+            <a href="about-us.html" title="About Us">
+              <strong>About</strong>
+            </a>
+            </li>
+			
+		   
+		
+          <li class="nav-practical-information dropdown">
+            <a href="guidelines-for.html" title="Author Information">
+              <strong>Author</strong>
+            </a>
+            <ol>
+              
+                
+              
+                <li><a href="guidelines-for.html" title="Submission Guidelines">Submission Guidelines</a></li>
+				<li><a href="registration.html" title="Registration">Registration</a></li>
+    
+            </ol>  
+            
+        </li>
+		<li class="nav-sponsors-exhibitors dropdown">
+            <a href="cfp.html" title="Tracks">
+              <strong>Tracks</strong>
+            </a>
+            </li>
+          
+		   <li class="nav-sponsors-exhibitors dropdown">
+            <a href="committee.html" title="Committee">
+              <strong>Committee</strong>
+            </a>
+            </li>
+			
+          
+          <li class="nav-sponsors-exhibitors dropdown">
+            <a href="keynote.html" title="Speakers">
+              <strong>Speakers</strong>
+            </a>
+            </li>
+          
+          
+  
+         
+          
+        
+           
+
+    
+         
+		 <li class="nav-programme dropdown">
+            <a href="#" title="Committee"><strong>Proceedings</strong>
+            </a>
+            <ol>
+              
+     <li><a href="http://link.springer.com/book/10.1007/978-81-322-2205-7"  target="_blank" title="Springer Proceedings 2014">Springer Proceedings 2014</a></li>
+	 <li><a href="http://link.springer.com/book/10.1007/978-81-322-2734-2" target="_blank"  title="Springer Proceedings 2015">Springer Proceedings 2015</a></li>
+	 <li><a href="http://www.springer.com/in/book/9789811038730" title="Springer Proceedings 2016" target="_blank" >Springer Proceedings 2016</a></li>
+	 <li><a href="https://link.springer.com/book/10.1007/978-981-10-8055-5" title="Springer Proceedings 2017" target="_blank" >Springer Proceedings 2017</a></li>
+               
+            </ol>  
+            
+          </li>
+		  
+		  
+		   <li class="nav-programme dropdown">
+            <a href="#" title="Committee"><strong>Downloads</strong>
+            </a>
+            <ol>
+              
+    <li><a href="downloads/registrationform.docx" target="_blank" title="Registration Form">Registration Form</a></li>        
+          <li><a href="downloads/manuscript.doc" title="Manuscript Word Template">Manuscript Word Template</a></li>
+	 <li><a href="downloads/consent.pdf" target="_blank" title="Consent To Publish">Consent To Publish</a></li>
+	 <li><a href="downloads/latex.zip" target="_blank" title="LaTex Template">LaTex Template</a></li>
+	 <li><a href="downloads/guidelines.pdf" target="_blank"  title="ManuScript Guidelines">ManuScript Guidelines</a></li>
+	 
+	           
+            </ol>  
+            
+          </li>
+		  
+		  
+		  <!--<li class="nav-sponsors-exhibitors dropdown">
+            <a href="iccidm2016/index.html" target="_blank" title="iccidm 2016">
+              <strong>ICCIDM 2016</strong>
+            </a>
+            </li>-->
+          
+        
+          <li class="nav-sponsors-exhibitors dropdown">
+            <a href="contact-us.html" title="Contact Us">
+              <strong>Contact</strong>
+            </a>
+            </li>
+        
+                          
+    </ul>
+    
+</nav>
+
+      
+      
+
+   
+    
+
+    <div class="above cf">
+  <script type="text/javascript">
+  $(
+  function() {
+    $("#hero").rotator({
+      next_button:     '.next',
+      previous_button: '.back'
+    });
+  });
+  </script>
+        <section id="hero">
+          <article id="slide1" class="slide"> <a href="guidelines-for.html" title="Important Dates" >
+            <div class="photo"> <img src="hero/image/s11.jpg"> </div>
+            <div class="text">
+              <p class="heading" color ="white"></p>
+              <h1><font color="yellow">Important Dates</font></h1>
+              <dl>
+                <dt>
+                  <h5>APRIL 05, 2021</h5>
+                </dt>
+                <p><strong>Full Paper Submission Open</strong></p>
+                <br>
+                <dt>
+                  <h5>JULY 05, 2021</h5>
+                </dt>
+                <p><strong>Full Paper Submission Deadline <br/>
+                </strong></p>
+                <br>
+                <!--<dt>
+                  <h5><strike><font color="red">July 15, 2018</font></strike></h5>
+                </dt>-->
+                <dt>
+                  <h5>AUGUST 15, 2021</h5>
+                </dt>
+                <p><strong>Acceptance Notification </strong></p>
+                <br>
+                <dt>
+                  <h5>AUG 15 - SEP 05, 2021</h5>
+                </dt>
+                <p><strong>Final Camera Ready &amp; Registration </strong></p>
+                <br>
+                <dt>
+                  <h5>DEC 11 - 12, 2021</h5>
+                </dt>
+                <p><strong>Date of Conference </strong></p>
+                <br>
+              </dl>
+            </div>
+          </a> </article>
+          <!--
+            <article id="slide2" class="slide">
+            
+                <a href="guidelines-for.php" title="Important Dates" > 
+                
+                <div class="photo">
+                    <img src="hero/image/s2.jpg">
+                </div>
+                
+                <div class="text">
+                    <p class="heading" color ="white"></p>
+                    <h1><font color="yellow">Important Dates</font></h1>
+                  <dl>
+                      <dt><h5>February 15, 2018</h5></dt>
+                      <p><strong>Full Paper Submission Open</strong></p><br>
+                    <dt><h5><strike><font color="red">June 15, 2018</font></strike></h5></dt><dt><h5>June 30, 2018</h5></dt>
+                      <p><strong>Full Paper Submission Deadline <br/></strong></p><br>
+                      <dt><h5>July 15, 2018</h5></dt>
+                      <p><strong>Acceptance Notification </strong></p><br>
+					  <dt><h5>July 25-July 30, 2018</h5></dt>
+                      <p><strong>Final Camera Ready Paper with Registration  </strong></p><br>
+					  <dt><h5>Dec 15-Dec 16, 2018</h5></dt>
+                      <p><strong>Date of Conference  </strong></p><br>
+		     
+		     
+                    </dl>
+
+                    
+                </div>
+                
+                </a>
+            
+            </article> 
+        
+        -->
+          <!--
+            <article id="slide3" class="slide">
+            
+                
+                <a href="guidelines-for.php" title="Important Dates" >
+                <div class="photo">
+                    <img src="hero/image/s3.jpg">
+                </div>
+                
+                <div class="text">
+                    <p class="heading" color ="white"></p>
+                    <h1><font color="yellow">Important Dates</font></h1>
+               <dl>
+                      <dt><h5>February 10, 2018</h5></dt>
+                      <p><strong>Full Paper Submission Open</strong></p><br>
+                      <dt><h5><strike><font color="red">June 25, 2018</font></strike>July 3, 2018</h5></dt>
+                      <p><strong>Full Paper Submission Deadline <br/></strong></p><br>
+                      <dt><h5>July 1, 2018</h5></dt>
+                      <p><strong>1st Phase Acceptance Notification </strong></p><br>
+					  <dt><h5>July 7, 2018</h5></dt>
+                      <p><strong>2nd Phase Acceptance Notification </strong></p><br>
+					  <dt><h5>July 25-August 15, 2018</h5></dt>
+                      <p><strong>Final Camera Ready Paper with Registration  </strong></p><br>
+		     
+                    </dl>
+
+                    
+                </div>
+                </a>
+                
+            
+            </article> 
+        
+        -->
+          <!--
+            <article id="slide4" class="slide">
+            
+               <a href="guidelines-for.php" title="Important Dates" >
+                
+                <div class="photo">
+                    <img src="hero/image/s4.jpg">
+                </div>
+                
+                <div class="text">
+                    <p class="heading" color ="white"></p>
+                    <h1><font color="yellow">Important Dates</font></h1>
+                 <dl>
+                      <dt><h5>February 15, 2018</h5></dt>
+                      <p><strong>Full Paper Submission Open</strong></p><br>
+                   <dt><h5><strike><font color="red">June 15, 2018</font></strike></h5></dt><dt><h5>June 30, 2018</h5></dt>
+                      <p><strong>Full Paper Submission Deadline <br/></strong></p><br>
+                      <dt><h5>July 15, 2018</h5></dt>
+                      <p><strong>Acceptance Notification </strong></p><br>
+					  <dt><h5>July 25-July 30, 2018</h5></dt>
+                      <p><strong>Final Camera Ready Paper with Registration  </strong></p><br>
+					  <dt><h5>Dec 15-Dec 16, 2018</h5></dt>
+                      <p><strong>Date of Conference  </strong></p><br>
+		     
+		     
+                    </dl>
+
+                    
+                </div>
+                </a>
+                          
+            </article> 
+        
+        -->
+          <ul>
+            <!-- <li><a href="#slide1" role="button">1</a></li>
+            
+                <li><a href="#slide2" role="button">2</a></li>
+            
+               <!-- <li><a href="#slide3" role="button">3</a></li>-->
+            <li><a href="#slide4" role="button">4</a></li>
+          </ul>
+          <a class="control next" href="#" title="Next Slide" role="button"><span class="icons">></span></a> <a class="control back" href="#" title="Previous Slide" role="button"><span class="icons"><</span></a> </section>
+    </div>
+    
+    <div class="below cf">
+    
+      <div class="welcome cf">
+        <div class="intro">
+          <h2><a title="Welcome">About ICCIDM</a></h2>
+          <p align="justify" style="font-family:times; font-size:16px;">
+After the five successful versions of ICCIDM, the 6<sup>th</sup> <strong>International Conference on Computational Intelligence in Data Mining (ICCIDM-2020)</strong> is all set to ready to come into the floor in this year. <strong>ICCIDM 2014</strong> (VSSUT, Burla), <strong>ICCIDM 2015</strong>(RIT, Berhampur), <strong>ICCIDM 2016</strong>(KIIT University, Bhubaneswar),<strong> ICCIDM 2017 &amp; ICCIDM 2018</strong> (VSSUT,Burla), <strong>ICCIDM 2021</strong> is going to be organized by the Department of CSE, Aditya Institute of Technology and Management (AITAM), Tekkali, AP, India.  ICCIDM provides an International forum for presentation of original research findings, as well as exchange and dissemination of innovative, practical development experiences in different fields of engineering.  The conference draws researchers and application developers from a wide range of data mining and computational Intelligence related areas along with their algorithms and applications of current issues of almost all branches of Engineering and Technology. After the five successful versions of ICCIDM, this conference has tried grounding every aspect related to Data Mining, covering all the possible research areas and crux.  Awareness of Data Mining and its application is becoming popular among the general population. Parallel offers of hope add woes to the researchers of Data Mining due to the potential limitations experienced in the real-time. This conference aimed to expand its coverage in the areas of Data Mining where expert talks, young researchers presentations will be placed in every session of the meeting will be inspired and keep up your enthusiasm. We feel our expert International Advisory, Technical and Organizing Committee are our major asset; however your presence over the venue will add one more feather to the crown of ICCIDM-2021. By promoting novel, high quality research findings, and innovative solutions to challenging data mining problems, the conference seeks to continuously advance the state-of-the-art in data mining as well as the other promising areas of computing. Original, unpublished research papers from all viewpoints, including theory, practice, experimentation, and review papers highlighting specific research domains for presentation in the technical sessions of the conference are invited from researchers, academicians and professionals throughout the globe. The conference is creating a cross disciplinary summit that transcends departmental, institutional, industrial, public and private research organizations and global barriers and lends itself to the integration of research and education in the vital field of data mining and soft computing
+<a href="about-us.html">Read More</a>
+          </p>
+        </div>  
+       
+      </div>
+      
+      
+
+              
+              
+              
+              
+              
+              
+              
+           
+      
+      <br><br>
+<div class="promos">
+  
+    <div class="promo">
+  
+    <figure style="background-image: url( theme/img/vssutlogo12.png)">
+      <div class="ratio"></div>
+    </figure>
+    
+    </div> 
+  
+</div>
+<br>
+<br>
+
+
+
+<div class="programme dailyprogramme">
+    
+    <div class="inner">
+        <a href="iccidm-2018/index.html" target="_blank" class="register-button" onClick="ga('send', 'event', 'Conference Register', 'click', 'main', '0');" title="CheckOut Today!">ICCIDM 2018</a>
+		
+        
+        
+    </div>
+	</div><br><br>
+	<div class="programme dailyprogramme">
+	<div class="inner">
+        <a href="https://easychair.org/conferences/?conf=iccidm2018" target="_blank" class="register-button" onClick="ga('send', 'event', 'Conference Register', 'click', 'main', '0');" title="Submit Paper!">SUBMIT PAPER</a>
+		
+        
+        
+    </div>
+
+</div>
+
+<!--
+<div class="programme dailyprogramme">
+    
+    <div class="inner">
+        <a href="#" class="register-button" onClick="ga('send', 'event', 'Conference Register', 'click', 'main', '0');" title="Download Today!">Technical Session and Paper Presentation Schedule</a>
+		
+        
+        
+    </div>
+
+</div>-->
+<!--<div class="programme dailyprogramme">
+    
+    <div class="inner">
+<a href="cfr.php" class="register-button" onClick="ga('send', 'event', 'Conference Register', 'click', 'main', '0');" title="Register Today!">Call for Reviewers</a>
+		
+        
+        
+    </div>
+
+</div>
+<div class="programme dailyprogramme">
+    
+    <div class="inner">
+		<a href="cfs.php" class="register-button" onClick="ga('send', 'event', 'Conference Register', 'click', 'main', '0');" title="Register Today!">Call for Special Sessions</a>
+		
+        
+        
+    </div>
+
+</div>-->
+
+
+        
+
+     
+<!--<section id="feed" class="feed grid ui-tabs">
+<h4><font color="white">Publications</font></h4>
+<table>
+<tr>
+
+      
+		<td>
+		
+				
+				 <p><img src="theme/img/aisc.jpg" style="float:left;width=100%">
+				 <h2 align="center"><a title="Welcome">Conference Proceedings</a></h2>
+				 The conference proceedings will be published in
+				 <p style="font-size: 22px;"><strong> Springer Advances in Intelligent Systems and Computing (AISC) Series, now indexed by: ISI Proceedings, DBLP. Ulrich's, EI-Compendex, SCOPUS, Zentralblatt Math, MetaPress, Springerlink.. </strong></p>
+				
+		 		</p>
+		</td>
+		<td>
+  <h2><a title="Welcome">Special Issue</a></h2>
+				Moreover, some of the selected high quality papers of ICCIDM with extended versions will be published in reputed journals from International Publishers
+				<p style="font-size: 22px;"><strong>  <a href="http://www.inderscience.com/info/ingeneral/cfp.php?id=3891" target="_blank">International Journal of Computational Intelligence Studies, Inderscience Publication.</a>
+				and <a href="http://www.springer.com/?SGWID=0-102-2-1567748-preview&dynamic=true" target="_blank" >International Journal of Data Science and Analytics, Springer.</a></strong></p>
+			
+				
+				</p>
+				
+
+
+        <p>
+		
+		
+		</p>
+		
+	
+		<br><br>
+        
+
+
+</td>
+</tr>
+</table>
+<table>
+<tr>
+
+<center><a href="https://easychair.org/conferences/?conf=iccidm2018" target="_blank" class="buno buno1">Paper Submission </a></center>
+
+</tr>
+</table>
+
+
+</table>
+ 
+</section>-->
+<section id="feed" class="feed grid ui-tabs">
+
+  
+<p></p>
+ 
+</section>
+<section id="feed" class="feed grid ui-tabs">
+<h4><font color="white">Publications</font></h4>
+  
+
+
+<div class="">
+        <p>
+		
+		 <p style="font-size: 22px;"><strong>
+		 <p align="center">The conference proceedings will be published in Springer Advances in Intelligent Systems and Computing (AISC) Series (Approval Pending), now indexed by: ISI Proceedings, DBLP. Ulrich's, EI-Compendex, SCOPUS, Zentralblatt Math, MetaPress, Springerlink. </p></strong>Moreover, some of the selected high quality papers of ICCIDM with extended versions will be published in reputed journals of International Publishers</p>
+				<!--<p style="font-size: 22px;"><strong>  <a href="http://www.inderscience.com/info/ingeneral/cfp.php?id=3891" target="_blank">International Journal of Computational Intelligence Studies, Inderscience Publication.</a>
+				and <a href="http://www.springer.com/?SGWID=0-102-2-1567748-preview&dynamic=true" target="_blank" >International Journal of Data Science and Analytics, Springer.</a></strong></p>-->
+	<b>			
+		<!--1.     <font color="red"> Neural Computing and Applications, Springer</font> (<font color="blue">Indexing: SCI, SCOPUS, Impact Factor: 4.213</font>)
+<a href="https://www.springer.com/computer/ai/journal/521" target="_blank">
+https://www.springer.com/computer/ai/journal/521</a>
+
+<br><br> 
+
+2. <font color="red">      Evolutionary Intelligence, Springer </font>(<font color="blue">Indexing: SCOPUS, DBLP, EI-Compendex</font>) <a href="https://www.springer.com/engineering/computational+intelligence+and+complexity/journal/12065" target="_blank"> https://www.springer.com/engineering/computational+intelligence+and+complexity/journal/12065</a>
+
+ <br><br>-->
+
+		</p>
+		
+		
+        
+</div>
+<p></p>
+ 
+</section>
+<section id="feed" class="feed grid ui-tabs">
+<h4><font color="white">Experts Asociated</font></h4>
+  
+<p><marquee behavior="scroll" onmouseover="this.stop();" onmouseout="this.start();"scrollamount='4'>
+
+				<img src="theme/img/speakers/1.jpg" width="120" height="120">
+				<img src="theme/img/speakers/2.jpg" width="120" height="120">
+				<img src="theme/img/speakers/3.jpg" width="120" height="120">
+				<img src="theme/img/speakers/4.jpg" width="120" height="120">
+				<img src="theme/img/speakers/5.jpg" width="120" height="120">
+				<img src="theme/img/speakers/6.jpg" width="120" height="120">
+				<img src="theme/img/speakers/7.jpg" width="120" height="120">
+				<img src="theme/img/speakers/8.jpg" width="120" height="120">
+				<img src="theme/img/speakers/9.jpg" width="120" height="120">
+				<img src="theme/img/speakers/10.jpg" width="120" height="120">
+				<img src="theme/img/speakers/11.jpg" width="120" height="120">
+				<img src="theme/img/speakers/12.jpg" width="120" height="120">
+				<img src="theme/img/speakers/13.jpg" width="120" height="120">
+				<img src="theme/img/speakers/14.jpg" width="120" height="120">
+				<img src="theme/img/speakers/15.jpg" width="120" height="120">
+				<img src="theme/img/speakers/16.jpg" width="120" height="120">
+				<img src="theme/img/speakers/17.jpg" width="120" height="120">
+				<img src="theme/img/speakers/18.jpg" width="120" height="120">
+				<img src="theme/img/speakers/19.jpg" width="120" height="120">
+				<img src="theme/img/speakers/20.jpg" width="120" height="120">
+				
+
+
+</marquee></p>
+ 
+</section>
+
+
+    
+
+    
+  </div>
+
+      
+      
+       
+    </div>
+    
+
+      
+    
+  
+    <footer>
+			
+					 
+						<p align="center"><strong>&copy; Copyrights ICCIDM 2021. All Rights Reserved</strong></a></p>
+
+			
+   </footer>
+<!--Get Site Control-->
+<!--<script>
+  (function (w,i,d,g,e,t,s) {w[d] = w[d]||[];t= i.createElement(g);
+    t.async=1;t.src=e;s=i.getElementsByTagName(g)[0];s.parentNode.insertBefore(t, s);
+  })(window, document, '_gscq','script','//widgets.getsitecontrol.com/69346/script.js');
+</script>-->
+
+
+</body>
+
+
+
+<!-- Mirrored from iccidm.in/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 26 Dec 2019 14:18:47 GMT -->
+</html>

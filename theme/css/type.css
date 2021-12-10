@@ -1,0 +1,441 @@
+body { 
+  font: 100%/1.4 'Roboto',arial, helvetica, sans-serif;
+  font-weight: 300;
+  text-align: center; 
+  color: #262727; }
+    
+.ie8 body { font-family: "proxima-nova-n3", "proxima-nova"; }
+
+  
+/* font: font-style font-variant font-weight font-size/line-height font-family; */
+/* Global Links
+------------------------------------ */
+
+a { 
+    color: #2f478c; 
+    text-decoration: none;
+    }
+  
+a:focus, a:hover { 
+    color: #202666; 
+    outline: none; 
+    text-decoration: none; 
+    }
+
+
+/* Firefox Seleted Text
+------------------------------------ */
+
+::-moz-selection,
+::selection {
+    background: #00aec5;
+    color: #fff; 
+    } 
+  	
+
+/* Headings
+------------------------------------ */
+h1, h2, h3, h4, h5, h6 { 
+    font-family: 'Roboto Condensed','Arial Narrow','Helvetica Condensed', arial, helvetica, sans-serif;
+    line-height: 1.1; 
+    font-weight: 400; 
+    }
+     
+    
+h1 { 
+    font-size: 1.8em;
+    margin-bottom: .25em;
+    }
+    
+
+h1.id {
+    font-size: 2em;
+    margin-bottom: .5em; 
+    font-weight: normal;
+    }
+
+h2 { 
+    font-size: 1.5em;
+    margin-bottom: .25em;
+    }
+  
+h3 { 
+    font-size: 1.25em;
+    margin-bottom: .5em;
+    /*color: #283b80;*/
+    font-weight: 700;
+    }
+    
+h3.title { 
+    text-transform: uppercase; 
+    background: #0C1440; 
+    padding: .75em;
+    margin-bottom: 0;
+    font-size: 1.15em;
+    line-height: 1;
+    color: #003e7e !important;
+    font-weight: 200;
+    }
+
+h3.title, h3.title a  { color: white; }
+h3.title a:hover    { color: white; }
+  
+h4  { 
+    font-size: 0.95em;
+    text-transform: uppercase;
+    background: #15224f;
+    border-bottom: medium none;
+    margin: 0 0 .75em;
+    padding: .55em;
+    }
+    
+#interior h4,
+h4 a,
+h4 a:hover    { color: white; }    
+
+h5  { font-size: 1.5em; }
+
+h6  { font-size: 1.4em; }
+
+ 
+@font-face {
+    font-family: 'trilogyicons';
+    src:    url('https://s3.amazonaws.com/icomoon.io/31537/Trilogy/Trilogy-Icons.eot?8olq4h');
+    src:    url('https://s3.amazonaws.com/icomoon.io/31537/Trilogy/Trilogy-Icons.eot?8olq4h#iefix') format('embedded-opentype'),
+        url('https://s3.amazonaws.com/icomoon.io/31537/Trilogy/Trilogy-Icons.woff2?8olq4h') format('woff2'),
+        url('https://s3.amazonaws.com/icomoon.io/31537/Trilogy/Trilogy-Icons.ttf?8olq4h') format('truetype'),
+        url('https://s3.amazonaws.com/icomoon.io/31537/Trilogy/Trilogy-Icons.woff?8olq4h') format('woff'),
+        url('https://s3.amazonaws.com/icomoon.io/31537/Trilogy/Trilogy-Icons.svg?8olq4h#Trilogy-Icons') format('svg');
+}
+.icons {
+  content: attr(data-icon);
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  font-weight: normal;
+  font-style: normal;    
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+  
+.icons { font-family: 'trilogyicons'; }
+  
+  
+
+/* Text elements
+-------------------------------------------------------------- */
+
+p, .introduction      { margin: 0 0 1.1em; }
+p:last-child          { margin: 0; }
+p img.left            { float: left; margin: 0 10px 10px 0; padding: 0; }
+p img.right           { float: right; margin: 0 0 10px 10px; }
+
+small                 { font-size: .9em; line-height: 1.1; font-weight: 300; margin: 0 0 .25em 0; }
+#content small        { display: block; }
+
+.meta         { margin-bottom: 1.1em; }
+.meta time    { opacity: .6; font-weight: 300; }
+
+blockquote    { margin: 1.5em; color: #666; font-style: italic; }
+strong        { font-weight: 600; }
+em,dfn        { font-style: italic; }
+dfn           { font-weight: bold; }
+
+small, sub, sup { font-size: .83em }
+sub             { vertical-align: sub }
+sup             { vertical-align: super }
+
+abbr, 
+acronym       { border-bottom: 1px dotted #666; }
+address       { margin: 0 0 1.5em; font-style: normal; }
+del           { color:#666; }
+
+pre,code      { margin: 1.5em 0; white-space: pre; }
+pre,code,tt   { font: 1em 'andale mono', 'lucida console', monospace; line-height: 1.5; } 
+
+.clear        { clear: both; display: block; }
+
+
+
+
+/* Lists
+-------------------------------------------------------------- */
+
+#content li ul, 
+#content li ol  { margin: 0 1.5em; }
+
+#content ul, #content ol { margin: 0 1.5em 1em 1.5em; }
+
+#content ul li, #content ol li { padding-bottom: .5em; line-height: 1.25; }
+
+#content ul li li:last-child, #content ol li li:last-child { padding-bottom: 0;  }
+
+#content ul, #content ol { margin: 0 0 1.1em 2em; }
+
+#content ul    { list-style-type: disc; }
+#content ul ul { list-style-type: none; margin-bottom: 0; }
+#content ul ul li:before { content: '- '; }
+#content ul ul li:before { content: '- '; }
+
+#content ol    { list-style-type: decimal; }
+
+#content dl    { margin: 0 0 1em 0; }
+#content dl dt { font-weight: bold; }
+#content dd    { margin-left: 1.5em; }
+
+
+/* Tables
+-------------------------------------------------------------- */
+
+table      { margin-bottom: 1.4em; width:100%; }
+
+    .results #content table { margin-bottom: 0; }
+    
+    .results #content table.gsc-table-result { margin: 0 8px; }
+
+tr { border-bottom: 1px dotted #e1e1e1; }
+
+tr:nth-child(2n) { background: #f9f9f9; }
+
+th         { font-weight: 300; }
+th,td      { padding: .5em; }
+
+
+.results #content th, .results #content td { padding: 0; }
+
+
+
+td         { vertical-align: top; }
+tr.even td { background: #E5ECF9; }
+tfoot      { font-style: italic; }
+caption    { background: #eee; }
+
+
+
+
+/* ---- Lists ---- */   
+     
+.list { position: relative; }  
+
+#content .list .inner { padding: 5px 15px !important; }
+
+.list.more { 
+    margin-top: 10px;
+    padding-top: 15px;
+    border-top: 1px solid #f5f5f5; 
+    clear: both;
+    display: block; 
+    }
+    
+.list .title { margin-bottom: 5px; }
+
+.list article {
+    width: auto;
+    padding: 5px 0;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition:    all .3s ease-in-out;
+    -o-transition:      all .3s ease-in-out;
+    -ms-transition:     all .3s ease-in-out;
+    transition:         all .3s ease-in-out; 
+    }
+  
+.list article a { display: block; }
+
+    .list article.publication a { display: inline-block; }
+
+.list article time { 
+    width: 5.5%;
+    float: left;
+    margin: 8px 1% 0 0;
+    font-size: 16px;
+    line-height: 1;
+    color: #6c6c6c;
+    white-space: nowrap;
+    -webkit-transition: color .3s ease-in-out;
+    -moz-transition:    color .3s ease-in-out;
+    -o-transition:      color .3s ease-in-out;
+    -ms-transition:     color .3s ease-in-out;
+    transition:         color .3s ease-in-out; 
+    }
+  
+  
+  
+  
+/*.gsc-input-box { height: 40px !important;}*/
+  
+    .list article:hover time { color: #4e4e4e; }
+    
+#options .list article time { font-size: 15px; width: 18%; margin: 4px 1% 0 0; }
+    
+.list article .item-text {  
+    float: left;
+    width: 93.5%;
+    }
+    
+#options .list article .item-text { width: 81% }
+  
+.list article h3 { 
+    font-size: 28px;
+    line-height: 1;
+    margin-bottom: 5px;
+    -webkit-transition: color .3s ease-in-out;
+    -moz-transition:    color .3s ease-in-out;
+    -o-transition:      color .3s ease-in-out;
+    -ms-transition:     color .3s ease-in-out;
+    transition:         color .3s ease-in-out; 
+    }
+    
+    .list article a h3 { color: #0066b3; }
+  
+    .list article:hover a h3 { color: #003576; }
+    
+#options .list article h3 { font-size: 20px; }
+
+.list article.publication h3 { margin: 0; }
+
+.list article p { 
+    font-size: 15px;
+    line-height: 1.1;
+    color: #8c9ca3;
+    margin-bottom: 0;
+    -webkit-transition: color .3s ease-in-out;
+    -moz-transition:    color .3s ease-in-out;
+    -o-transition:      color .3s ease-in-out;
+    -ms-transition:     color .3s ease-in-out;
+    transition:         color .3s ease-in-out; 
+    }
+  
+    .list article:hover p { color: #7e8e95; }
+    
+.list article.publication p { margin-bottom: .5em; }
+
+.list article.publication p:last-child { margin-bottom: 0; }
+
+#options .list article p { display: none; }
+
+
+
+
+/* ---- Bulleted lists ---- */   
+
+.list.bullets article { 
+    position: relative; 
+    } 
+
+.list.bullets article a { 
+    padding-left: 17px;
+    } 
+
+.list.bullets article a:before { 
+    height: 0; 
+    width: 0;    
+    margin-left: 0;  
+    content: "   ";    
+    position: absolute;
+    top: 13px;
+    left: 0; 
+    bottom: 100%;   
+    pointer-events: none;
+    border-color: rgba(158, 158, 158, 1); 
+    border: 4px solid transparent; 
+    border-color: #9e9e9e;  
+    } 
+    
+.list.bullets article h3 { font-size: 24px; }
+
+.list.bullets article .logistics {  
+    color: #6c6c6c;
+    font-weight: 300;
+    margin: 3px 0;
+    }
+
+.list.bullets article .logistics time { 
+    float: none; 
+    margin: 0;
+    }
+    
+.list.bullets article p { 
+    color: #8c9ca3;
+    }
+
+
+/*#section-menu {
+    float: left;
+    width: 60%;
+    }*/
+
+
+
+/*----- Infinite Scroll Loader -----*/
+
+#infscr-loading { 
+  text-align: center;
+  font-size: 10px; 
+  color: #afafaf;
+  text-transform: uppercase;
+  padding: 6px 0; }
+#infscr-loading em { font-style: normal; }   
+
+
+
+.programme-overview {
+    background: #DEDEDE;
+    float: right;
+    width: 40%;
+    }
+
+.programme-overview h4 {
+    background: none repeat scroll 0 0 #b9dfca;
+    margin-bottom: 0;
+    color: #fff;
+}
+
+#content .programme-overview ol {
+    list-style-type: none;
+    margin: 1em;
+    }
+
+#content .programme-overview ol li {
+ font-size: 17px;
+}
+
+.programme-overview a {
+    color: #262727;
+    display: block;
+    font-size: 1em;
+    line-height: 1.2em;
+    padding-left: 1.7em;
+    position: relative;
+    vertical-align: middle;
+}
+
+.programme-overview  a:hover {
+ opacity:.6; 
+}
+
+.programme-overview  a:before {
+    border: 2px solid #ED5B46;
+    border-radius: 9px;
+    color: #ED5B46;
+    content: ">";
+    display: inline-block;
+    font-family: 'trilogyicons';
+    font-size: 7px;
+    font-weight: normal;
+    height: 18px;
+    line-height: 14px;
+    margin-right: 5px;
+    padding-left: 1px;
+    text-align: center;
+    width: 18px;
+    position: absolute;
+    top: 2px;
+    left: 0;
+    }
+    
+#section-menu li {
+    color: #DEDEDE;
+    font-size: 19px;
+    list-style: square outside none;
+}   

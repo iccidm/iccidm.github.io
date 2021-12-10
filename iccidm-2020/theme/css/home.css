@@ -1,0 +1,739 @@
+#hero {
+    background-color:#0C1440;
+    width: 100%;    
+    position: relative;
+    text-align: left;
+    overflow: hidden; 
+    }
+    
+    @media (min-width : 960px) { #hero { overflow: hidden; height: auto; }}
+
+.slide { 
+    -webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+    -ms-transition: none;
+    background-size: cover; 
+    max-width: 100%;
+    overflow: hidden;
+    position: relative; 
+    }
+    
+    @media (min-width : 960px) { .slide { padding-bottom: 40%; }}
+    
+.slide, .slide:before, .slide:after {
+    -moz-box-sizing:    content-box; 
+    -webkit-box-sizing: content-box;
+    box-sizing:         content-box; 
+    }
+  
+.slide a { 
+    width: 100%; 
+    display: block;
+    }
+    
+    @media (min-width : 960px) { .slide a { position: absolute; top: 0; left: 0; height: 100%; }}
+
+
+#hero .text {
+    background-color: #0C1440;
+    width: 100%;
+    height: auto;
+    padding: 2em 2.5em;
+    z-index: 99;
+    opacity: .95;
+    } 
+    
+    @media (min-width : 960px) { #hero .text {width: 34%; height: 100%; position: absolute; left: 0; top: 0; padding: .15em 1.25em 1.25em 3.25em; }}
+  
+#hero .heading {
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: .8em !important;
+    margin-bottom: 5px;
+    color: white;
+    }
+  
+#hero .photo { width: 100%; height: 0; padding-bottom: 61%; overflow: hidden; }
+    
+    @media (min-width : 640px) { #hero .photo { padding-bottom: 50% }}
+    @media (min-width : 960px) { #hero .photo { position: absolute; right: 0; top: 0; width: 66%; }}
+    
+#hero .photo img { width: 100%; }
+
+#hero a h1 {
+    font-size: 2em;
+    line-height: 1;
+    text-align: left;
+    color: white;
+    } 
+
+#hero a p {
+    text-align: left;
+    font-weight: 400;
+    color: white;
+    font-size: 1em;
+    line-height: 1.2;
+    display: inline-block;
+    }
+  
+#hero a:hover p { }      
+
+#hero .button { 
+    background: #6699ff;  
+    padding:  1em 2em;
+    display: inline-block;
+    position: relative;
+    white-space: nowrap;
+    text-wrap: none;
+    font-weight: 400;  
+    font-size: 14px;
+    text-transform: uppercase;
+    line-height: .9;
+    color: #fff;
+    }
+  
+#hero a:hover .button { background: #d31699; }   
+#hero a:active .button { background: #8c267a; }
+
+
+/* --- Slide Tabs --- */
+
+#hero ul { display: none; }
+
+/* --- Back/Next Buttons --- */
+
+#hero .control {
+    background-position: center center;
+    background-color: rgba(0,0,0,.2);
+    width: 30px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    opacity: .6; 
+    z-index: 9999;
+    text-align: center;
+    font-family: "trilogyicons";
+    font-size: 1.5em;
+    color: #FFFFFF;
+    padding: 4.5em 0 0;
+    }	
+  
+    @media (min-width : 640px) { #hero .control  { padding: 7em 0 0; }}
+    @media (min-width : 720px) { #hero .control  { padding: 7.5em 0 0; }}
+      
+#hero .control:hover { 
+    background-color: black;
+    background-color: rgba(0,0,0,.4);
+    opacity: 1; 
+    }
+  
+#hero .control:active { 
+    background-color: black;
+    background-color: rgba(0,0,0,.6);
+    }
+
+#hero .control.back {
+    content: ">";
+    left: 0;
+    }
+
+#hero .control.next {
+    content: ">";
+    right: 0;
+    }
+
+
+.credit {
+    font-size: 13px;
+    font-style: italic;
+    position: absolute;
+    right: 50px;
+    top: 360px;
+    color: #fff;
+    }
+
+
+/* --------------- Below --------------- */
+
+.below {
+    width: 100%
+    } 
+
+/* Welcome & Quicklinks */
+
+.welcome {
+    position: relative;
+    padding: 1.5em;
+    width: 100%;
+    text-align: left;
+    }
+    
+    @media (min-width : 960px) { .welcome { float:left; width: 65%; padding: 1em; margin-bottom: .15em; min-height:175px; }}
+
+.intro { width: 100%; }
+    
+    @media (min-width : 960px) { .intro  { float:left; width: 100%; padding-right: 1em; }}
+.papw { width:80%;
+        float:left;
+        padding:2em;
+        font-family: Helvetica,Arial,sans-serif;
+        font-size: 14px;
+        line-height: 1.42857143;
+        color: #333;
+        background-color: #fff;
+        display: inline-block; }
+
+
+.welcome h2 {
+    color: #003e7e;
+    font-size: 2em;
+    display:block;
+    margin-bottom: .25em;
+    }
+
+.welcome p {
+    font-size: .9em;
+    line-height: 1.2;
+    }
+
+.quick-links {
+    position: relative;
+    width: 100%;
+    }
+    
+    @media (min-width : 960px) { 
+        .quick-links          { float: right; width: 60%;  } 
+        .quick-links ul       { padding: 0; width: 50%; }
+        .quick-links ul.left  { float: left; }
+        .quick-links ul.right { float: right; }
+        }
+    
+.quick-links ul li {
+    list-style: none;
+    display: inline-block;
+    width: 100%;
+    margin: .25em 0;
+    float: left;
+    }
+  
+.quick-links a {
+    display: block;
+    font-size: 1em;
+    line-height: 1.2;
+    position: relative;
+    vertical-align: middle;
+    padding: .25em .25em .25em 1.6em;
+    }
+
+.quick-links a:before {
+    border: 2px solid #92b2d3;
+    border-radius: 9px;
+    color: #92b2d3;
+    content: ">";
+    display: inline-block;
+    font-family: 'trilogyicons';
+    font-size: 6px;
+    font-weight: normal;
+    line-height: 14px;
+    text-align: center;
+    transition: all 0.3s ease-in-out 0s;
+    height: 18px;
+    width: 18px;
+    position: absolute;
+    top: 4px;
+    left: 0;
+    }
+    
+.quick-links a:hover:before {
+    border: 2px solid #0060bf;
+    color: #0060bf;
+    }
+
+.quick-links a.photos:before {
+    border: none;
+    content: "c";
+    font-family: 'trilogyicons';
+    font-size: 14px;
+    }
+    
+.quick-links a.video:before {
+    border: none;
+    content: "V";
+    font-family: 'trilogyicons';
+    font-size: 14px;
+    }
+  
+/* Banner */
+
+.home-banner {
+  width: 100%; 
+  border-top: 1px solid white; 
+  display: block;
+  }
+
+  @media (min-width : 960px) { .home-banner { width: 35%; float: right; }}
+
+.home-banner img {
+  width: 100%; 
+  }
+ 
+  
+/* Daily Programme */
+    
+.dailyprogramme { padding: 1.5em; }
+    
+    @media (min-width : 960px) { 
+        .dailyprogramme { 
+            float: right; 
+            width:30%; 
+            margin: 0;
+            padding: 0;
+             margin-top: 2em;
+             margin-right:1.5em; 
+            }
+        .dailyprogramme .inner { 
+            padding: 1em;
+
+            }
+        }
+        
+.dailyprogramme .register-button {
+    display: block;
+    color: black;
+    font-size: 1.5em;
+	font-weight: 400;
+    background: #75AED9;
+    padding: .2em;
+    }
+    
+    .dailyprogramme .register-button:hover { background: #913875;
+	    color: white;
+	}
+
+.dailyprogramme .inner h3 {
+    padding-bottom: 0;
+    margin-bottom: .25em;
+    line-height: 1;
+    font-size: 1.15em;
+    text-align: left;
+    }
+
+.dailyprogramme h3 a {
+    font-size: 1.2em;
+    }
+
+.dailyprogramme h4 {
+    padding: .25em 0;
+    margin: 0;
+    border: none;
+    }
+
+.number { 
+    font-size: 2em;
+    }
+
+.day {
+    padding: .4em 0;
+    font-size: .9em;
+    }
+
+
+/* --------------- Feed --------------- */  
+
+#feed {
+    width: 100%;
+    position: relative;
+    }
+    
+    @media (min-width : 960px) { #feed { width: 100%; float: left; }}
+
+#feed .title { 
+    text-align: left;
+    }
+ 
+.feed .panel { 
+    height: auto; 
+    width: 100%;
+    } 
+ 
+.feed .slide { padding: 0; }
+ 
+.feed .slide a { height: auto; position: relative; }
+                     
+/* --- Back/Next Buttons --- */
+
+.feed .control {
+    background-repeat: no-repeat;
+    width: 10px;
+    height: 16px; 
+    position: absolute;
+    top: .85em;
+    }  
+    
+.feed .control.feed-back {
+    content: "<";
+    background-position: center center;
+    right: 36px; 
+    }  
+
+.feed .control.feed-next {
+    content: ">";
+    background-position: center center;
+    right: 20px; 
+    }  	
+    
+
+/* ---- Feed Controls ---- */   
+
+.feed ul { display: none; }
+
+
+
+/* ---- Feed/Lists ---- */   
+
+.feed article {
+    font-family: arial,helvetica,sans-serif;
+    line-height: 1.1; 
+    font-size: .95em;
+    font-weight: 300;
+    text-align: left;
+    color: #444444;
+    padding: 1em;
+    opacity: 1; 
+    }
+    
+    @media (min-width : 960px) { .feed article { width: 33.3%; float: left; overflow: hidden; }}
+    
+    .feed article:hover  { background-color: #f7f7f7;  }        
+    .feed article:active { opacity: .7; }
+    
+.feed article time { 
+    display: block;
+    font-family: "proxima-nova", arial, verdana, sans-serif;
+    font-size: .8em;
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: #959595;
+    margin-bottom: .25em;
+    }
+
+.feed article h4 { 
+    font-size: 1.15em;
+    font-family:"proxima-nova",Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    line-height: 1.2; 
+    margin: 0 0 .25em; 
+    padding: 0;
+    text-transform: none;
+    background: none;
+    border: none;
+    }
+
+.feed article p { margin-bottom: 0; line-height:1.2;  }
+
+.feed article a p { color: #444444; }
+
+.feed article.facebook p,
+.feed article.twitter p { 
+    font-size: 21px;
+    font-family:"proxima-nova",Arial, Helvetica, sans-serif;
+    font-weight: 300; 
+    }
+      
+.feed article small { 
+    margin-top: 6px; 
+    display: block;
+    font-family: arial, verdana, sans-serif;
+    font-size: 10px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.2;
+    }
+    
+.feed article small,
+.feed article small a { color: #787878; }
+  
+.feed article small a:hover { color: #444444; }
+
+.feed article .photo {
+    display: block;
+    margin-bottom: .5em;
+    width: 100%;
+    }
+
+
+/* Featured */
+
+#featured {
+    position: relative; 
+    width: 100%;
+    }   
+    
+    @media (min-width : 960px) { #featured { width: 35%; height: 300px; float: right;}}
+    
+#featured article {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    padding-bottom: 87%;
+    overflow: hidden;
+    height: 0;
+    } 
+    
+    @media (min-width : 960px) { #featured article { padding-bottom: 210px; }}
+    
+#featured article a {
+    width: 100%;
+    height: 300px;
+    display: block;
+    }      
+    
+#featured article a .heading {
+    background: rgba(0,62,126,.9);
+    padding: 1em;
+    font-size: 1.15em;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #d7d7d7;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    text-align: left;
+    } 
+
+#featured article a h2 {
+    opacity: 1; /* layer alpha */
+    background: rgba(115,203,202,1);
+    padding: .8em 1em;
+    width: 100%;
+    font-size: 1.2em;
+    color: rgba(255,255,255,1);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+    } 
+    
+.ie #featured article a h2 { 
+    background: #000000;
+    color: #fff; 
+    }
+  
+#featured h2 .description { font-size: .85em; }
+
+
+    
+/* LungHealth Tweets */    
+    
+#tweets {
+    background-color: #f7f7f7;
+    height: 290px;
+    position: relative; 
+    width: 100%;
+    }
+    
+    @media (min-width : 960px) { #tweets { width: 35%; float: right; }}
+    
+#tweets .title { 
+    padding: .5em; 
+    text-align: left;
+    font-size: 24px;
+    line-height: 36px;
+    text-transform: none !important;
+    margin: 0;
+    }
+
+#tweets .title .icons { 
+    display: block;
+    float: left;
+    margin: 0 6px 0 0;
+    font-size: 36px;
+    }
+
+#tweets .text {
+    height: auto;
+    padding: 30px 40px; 
+    text-align: center;
+    } 
+    
+#tweets h2 {
+    color: #0060bf;
+    font-size:48px;
+    line-height: 1;
+    margin: 30px 0 0 0;
+    }  
+
+#tweets h3 {
+    font-weight: 300;
+    color: #92b2d3;
+    font-size:20px;
+    line-height: 1;
+    }  
+    
+#tweets .text small { 
+    margin-top: 15px; 
+    display: block;
+    font-family: arial, verdana, sans-serif;
+    font-size: 10px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.2;
+    -webkit-transition: color .3s ease-in-out;
+    -moz-transition:    color .3s ease-in-out;
+    -o-transition:      color .3s ease-in-out;
+    -ms-transition:     color .3s ease-in-out;
+    transition:         color .3s ease-in-out; 
+    }
+    
+#tweets .text small,
+#tweets .text small a { color: #787878; }
+  
+#tweets .text small a:hover { color: #444444; }
+
+/* --- Slide Tabs --- */
+
+#tweets ul { display: none; }
+
+/* --- Back/Next Buttons --- */
+
+#tweets .control {
+    color: #0060bf;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 120px;
+    opacity: .6; 
+    z-index: 9999;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition:    all .3s ease-in-out;
+    -o-transition:      all .3s ease-in-out;
+    -ms-transition:     all .3s ease-in-out;
+    transition:         all .3s ease-in-out; 
+    font-family: "trilogyicons";
+    font-size: 21px;
+    line-height: 30px;
+    }	
+          
+#tweets .control:hover { opacity: 1; }
+  
+#tweets .control:active { opacity: .25; }
+
+#tweets .control.back {
+    content: ">";
+    left: 0;
+    }
+    
+#tweets .control.next {
+    content: ">";
+    right: 0;
+    }
+    
+    
+    
+/* Streaming promotion */  
+
+#streaming {
+    color: #b9dfca;
+    height: 60px;
+    overflow: hidden;
+    position: relative;
+    }
+
+#streaming a {
+    display: block;
+    height: 60px;
+    width: 100%;
+    }
+    
+#streaming a img {
+    height: 45px;
+    opacity: .3;
+    position: absolute;
+    top: 5px;
+    left: 10%;
+    }   
+    
+#streaming a h2 {
+    color: #b9dfca;
+    position: absolute;
+    top: 14px;
+    left: 16%;
+    width: 800px;
+    text-align: left;
+    }
+    
+#streaming a h2 span {
+    background: #b9dfca;
+    color: white;
+    padding: 7px 7px 6px 7px;
+    font-size: .8em;
+    display: inline-block;
+    }
+       
+#streaming a h2 span:hover { background: #b10000; }     
+
+.area li ul  {
+    
+        display: list-item;
+    text-align: -webkit-match-parent;
+}  
+.nap {
+    margin-left:2.5em;
+}
+.zapak{
+    margin-left:3.5em;
+    margin-right:3.5em;
+    width:30%;
+    
+}
+.qwer{
+	color: fffff;
+}
+.innew{
+    margin-right: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.ajar{
+    width: 80%;
+
+}
+.produ{
+    width:100%;
+    float:left;
+    padding:2em;
+    font-family: Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #fff;
+    display: inline-block; 
+
+}
+.buno{
+    background-color: #0C1440;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.buno1 {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.fotr{
+    background-color: #002953;
+}
+.pinnew {
+     margin-right: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+
+}
