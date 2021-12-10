@@ -1,0 +1,302 @@
+/* ==========================================================================
+      responsive
+========================================================================== */
+
+@media (min-width: 1200px) and (max-width: 1600px) {
+	.home-contact.games .col-md-6.contact-help {
+	    margin-left: 0px;
+	}
+	
+}
+@media (min-width: 961px) and (max-width: 1199px) {
+	#main-menu .nav>li>a {
+		padding:0 7px;
+		font-size: 11px !important;
+	}
+
+	#main-menu .nav>li>ul li a {
+		font-size: 11px !important;
+	}
+
+	.eventum-schedule .table{
+		background: #fff;
+	}
+	.home-contact.games .col-md-6.contact-help {
+	    margin-left: 0px;
+	}
+	
+}
+@media (min-width: 768px) and (max-width: 960px){
+	#main-menu .nav>li>a {
+		padding: 0 10px;
+		font-size: 11px !important;
+	}
+
+	#main-menu .nav>li>ul li a {
+		font-size: 11px !important;
+	}
+
+	/*counter*/
+	#countdown-timer >.countdown-section {
+		font-size: 42px;
+	}
+	/*counter*/
+	#countdown-timer {
+		margin: 0 -20px;
+	}	
+	#countdown-timer >.countdown-section >.countdown-period {
+		font-size: 18px;
+		margin: 0 12px;
+	}
+
+	.countdown-timer-title {
+		font-size: 36px !important;
+		line-height: 36px !important;
+	}
+	.countdown-timer-subtitle {
+		font-size: 20px !important;
+	}
+
+	.eventum-schedule .table{
+		background: #fff;
+		border: 1px solid #f1f1f1;
+	}
+
+	.themeum-speaker-listing .row .position:nth-child(2),
+	.themeum-speaker-listing .row .position:nth-child(3) {
+		margin-top: 0;
+	}
+
+
+
+}
+@media (max-width: 767px) {
+	/*counter*/
+	.wpb_single_image img {margin-bottom:30px;}
+	.sp-speaker{
+		margin-bottom: 30px;
+	}
+
+	.home-counter2 {
+		width: 95%;
+	}
+
+	#countdown-timer {
+		margin: 0 -12px;
+	}
+	#countdown-timer >.countdown-section {
+		font-size: 36px;
+		margin: 0 12px;
+	}
+	#countdown-timer >.countdown-section >.countdown-period {
+		font-size: 18px;
+	}
+	.countdown-timer-title {
+		font-size: 36px !important;
+		line-height: 36px !important;
+	}
+
+	.eventum-schedule .table{
+		background: #fff;
+	}
+
+	.mc4wp-form input[type=submit] {
+		margin-left: 0;
+	}
+
+	/*our blog*/
+	ul.latest-review .review-col-three {
+		width: 100%;
+	}
+
+	.eventum-schedules.layout-tabbed .events-nav >li .scedule-date >span{
+		font-size: 48px;
+	}
+
+	ul.wpb_thumbnails-fluid > li{
+		margin-bottom: 20px;
+	}
+
+	.home-event-title .style-sub-title:before,
+	.home-event-title .style-sub-title:after {
+		display: none;
+	}
+    .themeum-speaker-listing .speaker-inner{
+        padding: 20px;
+    }
+    .themeum-speaker-listing .speaker-inner .speaker-img{
+        margin-bottom: 15px;
+        float: none;
+    }
+    .themeum-speaker-listing .speaker-inner .speaker-content{
+        padding-left: 0;
+    }
+	.contact-form-7.home-contact.games h2 {
+	    margin-bottom: 18px;
+	}
+	.home-contact.games .col-md-6.contact-help {
+	    margin-top: 5px;
+	    margin-left: 2px;
+	    margin-bottom: 30px;
+	}
+	.developer h3.style-title {
+	    font-size: 15px !important;
+	    margin: 10px 0 !important;
+	    font-weight: 300;
+	}
+	.developer.title h3.style-title {
+	    font-size: 22px !important;
+	}
+	.developer h4.style-sub-title {
+	    font-size: 65px !important;
+	    margin: 0 !important;
+	}
+	.developer span.countdown-amount {
+	    font-size: 25px !important;
+	}
+	.developer .countdown-section span.countdown-period {
+	    font-size: 12px !important;
+	}
+	.developer.tag h4.style-sub-title {
+	    font-size: 28px !important;
+	}
+	.themeum-speaker-listing .row .position:nth-child(2),
+	.themeum-speaker-listing .row .position:nth-child(3) {
+	    margin-top: 0;
+	}
+
+
+
+	/* Schedule */
+	.col-md-4.col-sm-4 .event-content {
+	    text-align: center;
+	}
+	.event-content-wrap h3.start-time, .event-content-wrap .end-time {
+	    padding-top: 0;
+	}
+	.event-content-wrap {
+	    min-height: inherit;
+	    margin-top: 0;
+	}
+	.event-schedules-list h3.speaker, .event-schedules-list h3.genre {
+	    margin: 0;
+	}
+	.event-content {
+	    min-height: 100px;
+	    padding: 2px;
+	}
+	.event-content-wrap {
+	    padding: 1px;
+	    text-align: center;
+	}
+	.event-schedules-list .col-md-6 .speaker-wrap.event-content {
+	    margin-left: 0;
+	    padding-left: 0px;
+	    margin-right: 15px;
+	    text-align: center;
+	}
+	.event-schedules-list .col-md-4 {
+	    padding-left: 15px;
+	}
+	.row.schedule-row .col-md-2 {
+	    padding: 0 15px;
+	}
+	.event-schedules-list .col-sm-4.col-md-2 {
+	    text-align: center;
+	    margin-bottom: 40px;
+	}
+	.event-content-wrap h3.start-time, .event-content-wrap .end-time {
+	    display: inline-block;
+	    margin: 30px 5px 20px;
+	}
+	.speaker-wrap img {
+	    width: 90px;
+	    border-radius: 50%;
+	    margin-right: 0;
+	    display: inherit;
+	    float: inherit;
+	}
+	.speaker-wrap.event-content .wrap {
+	    margin-top: 28px;
+	    margin-bottom: 20px;
+	}
+	.developer.dev1, .vc_row.event-music{
+	    padding-top: 160px !important;
+	    padding-bottom: 170px !important;
+	}
+	.vc_row.games-event {
+	    padding-top: 160px !important;
+	    padding-bottom: 320px !important;
+	}
+	.developer.tag {
+	    padding-top: 50px !important;
+	    padding-bottom: 0px !important;
+	}
+	.col-md-7.contact-help {
+	    margin-top: 0;
+	    margin-left: 0;
+	}
+	.developer.border {
+	    padding-bottom: 0px !important;
+	}
+	.home-layout4 .eventum-schedules.layout-tabbed.layout-tabbed2 .events-nav>li {
+	    margin: 0 60px 60px 0;
+	}
+	.home-layout4 .eventum-schedules.layout-tabbed.layout-tabbed2 {
+	    border-bottom: none;
+	    padding-bottom: 0;
+	}
+	.eventum-schedules.layout-tabbed.layout-tabbed2 {
+	    margin-bottom: 0;
+	}
+
+
+}
+
+@media (min-width: 500px) and (max-width: 767px){
+    
+	.themeum-speaker-listing.speaker-transparent .col-xs-12,
+	.themeum-speaker-listing .col-xs-12 {
+		width: 50%;
+	}
+
+	.eventum-schedules.layout-tabbed .events-nav >li {
+		padding: 25px;
+	}
+}
+
+@media (max-width: 489px) {
+
+	.woocommerce .products.clearfix {
+	    margin-left: 0;
+	    margin-right: 0;
+	}
+	.woocommerce .products .product {
+	    width: 100%;
+	}
+	.tp-caption.Gym-Display1 {
+		font-size: 30px !important;
+	}
+	.tp-caption.Restaurant-Display {
+		font-size: 72px !important;
+	}
+	#countdown-timer >.countdown-section {
+		font-size: 22px;
+		margin: 0 12px;
+	}
+	#countdown-timer >.countdown-section >.countdown-period {
+		font-size: 14px;
+	}
+	/* schedule tabbed view */
+	.eventum-schedules.layout-tabbed .events-nav >li {
+		margin: 0 10px;
+	}
+	.eventum-schedules.layout-tabbed .events-nav >li {
+		padding: 12px;
+	}
+	.form.mc4wp-form .eventum-form, .mc4wp-form .eventum-form {
+	    width: 70%;
+	}
+
+
+}
